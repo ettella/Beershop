@@ -1,0 +1,54 @@
+<div class="container-fluid line">
+    <div class="row">
+        <div class="contact">
+            <img src="../../../assets/communications.png" alt="Contact">
+            <p>Contact</p>
+        </div>
+
+        <div class="language">
+            <img src="../../../assets/maps.png" alt="Language">
+            <p>en</p>
+            <img src="../../../assets/arrow down.png" alt="arrow">
+        </div>
+    </div>
+
+    <div class="row middle-section">
+
+        <div class="logo">
+            <a [routerLink]="['']">
+            <img src="../../../assets/logo.png" alt="BeerShop">
+            </a>
+        </div>
+
+        <div>
+            <app-input></app-input>
+        </div>
+
+        <div class="icons">
+            <div class="icon">
+                <img src="../../../assets/user.png" alt="user">
+                <p>My Account</p>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/heart.png" alt="user">
+                <a [routerLink]="['wishlist']">Wishlist ({{ wishlistCounter }}) </a>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/compareblue.png" alt="user">
+                <p>Compare (0)</p>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/cart.png" alt="user">
+                <a [routerLink]="['shopping-cart']">Cart ({{ cartCounter }})</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navbar">
+        <div class="nav-item"><a [routerLink]="['all-beers']"> All Beers </a></div>
+        <div class="nav-item"><a > Packages </a></div>
+        <div class="nav-item"><a > Beer Gifts </a></div>
+
+    </div>
+</div>

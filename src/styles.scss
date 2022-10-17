@@ -1,7 +1,7 @@
 
 // Typography
 
-* {font-family: Helvetica Neue}
+* {font-family: Lato}
 
 h1 { font-size: 28px; line-height:36px; font-weight:800}
 
@@ -64,3 +64,6 @@ h5 { font-size: 16px; line-height:24px; font-weight:800 }
 .color-light-grey { background-color: rgb(250,249,251);}
 
 .color-white { background-color: rgb(255,255,255); }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
