@@ -1,1 +1,9 @@
-<div></div>
+<div class="container-fluid main">
+    <div class="main-box">
+
+        <div *ngFor="let beer of beers">
+            <app-beer-item [image_url]="beer.image_url" [name]="beer.name" [tagline]="beer.tagline" ></app-beer-item>
+        </div>
+        
+    </div>
+</div>

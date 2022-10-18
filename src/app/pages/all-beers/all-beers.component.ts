@@ -1,4 +1,6 @@
+import { HttpService } from './../../services/http.service';
 import { Component, OnInit } from '@angular/core';
+import { Beer } from 'src/app/models/beer-model';
 
 @Component({
   selector: 'app-all-beers',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllBeersComponent implements OnInit {
 
-  constructor() { }
+  beers: Beer[] = [];
+
+  constructor(private httpService: HttpService) {
+    this.httpService.getAllBeers().subscribe((beerData)=> {
+      this.beers = beerData as Beer[];
+    })
+   }
 
   ngOnInit(): void {
   }

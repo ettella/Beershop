@@ -20,9 +20,13 @@
 
 @mixin color-warning-error { background-color: rgb(190,0,40); }
 
-@mixin color-black { background-color: rgb(0,0,0); }
+@mixin background-color-black { background-color: rgb(0,0,0); }
 
-@mixin color-dark-grey { background-color: rgb(123,126,130); }
+@mixin border-color-black { border:1px solid rgb(0,0,0); }
+
+@mixin color-black { color: rgb(0,0,0); }
+
+@mixin color-dark-grey { color: rgb(123,126,130); }
 
 @mixin color-grey { background-color: rgb(207,207, 207); }
 
@@ -30,4 +34,6 @@
 
 @mixin border-bottom-light-grey-2 { border-bottom: 2px solid rgb(250,249,251);}
 
-@mixin color-white { background-color: rgb(255,255,255); }
+@mixin background-color-white { background-color: rgb(255,255,255); }
+
+@mixin color-white { color: rgb(255,255,255); }
