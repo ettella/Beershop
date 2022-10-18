@@ -1,3 +1,11 @@
+@import "../../styles/colors.scss";
+@import "../../styles/text.scss";
+
+.line {
+    height:196px;
+    @include border-bottom-light-grey-2;
+}
+
 .contact {
     display: flex;
     flex-direction: row;
@@ -11,11 +19,10 @@
 
     height: 24px;
     width: 76.05387115478516px;
-    // margin-left: 88.0576171875px;
     margin-top: -10.5699462890625px;
     border-radius: 0px;
 
-    font-size: 14px;
+    @include text-caption;
 
     img {
         margin-top: -10px
@@ -31,11 +38,6 @@
     margin-top: 75px;
     border-radius: 0px;
 
-    // position: absolute;
-    // left: 6.3%;
-    // right: 84.14%;
-    // top: 37.88%;
-    // bottom: 13.64%;
 }
 
 .language {
@@ -71,8 +73,7 @@
     order: 0;
     flex-grow: 0;
 
-    text-transform: uppercase; 
-    font-size: 14px;
+    @include text-caption-uppercase;
         img {
             margin-top: -10px
         }
@@ -91,19 +92,13 @@
     padding: 0px;
     gap: 24px;
 
-    // position: absolute;
     width: 366.64px;
     height:40px;
-    // left: calc(50% - 366.64px/2 + 454.21px);
-    // top: 42%;
-    // bottom: 35.27%;
 
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
+    @include text-caption-small;
 
-    margin-left:760.99px;
-    margin-top:44.54px;
+    margin-left:960.99px;
+    margin-top:-125px;
 }
 
 .icon { 
@@ -121,8 +116,8 @@
     flex-grow: 0;
 
     a:hover {
-        border-bottom: 1px solid rgb(90,176,187);
-        color:rgb(90,176,187);
+        @include border-bottom-primary-1;
+        @include color-primary-text;
     }
 }
 
@@ -145,7 +140,7 @@ a {
     gap: 8px;
 
     position: absolute;
-    width: 314.57px;
+    width: 340.57px;
     height: 41.04px;
     left: calc(50% - 314.57px/2 - 157.77px);
 
@@ -158,8 +153,6 @@ a {
 .nav-item {
     box-sizing: border-box;
 
-/* Auto layout */
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -168,14 +161,8 @@ a {
     padding: 8px;
     gap: 10px;
 
-    width: 106px;
+    width: 100px;
     height: 40px;
-
-    /* Primary/Graduation/Dark */
-
-
-
-    /* Inside auto layout */
 
     flex: none;
     order: 0;
@@ -183,18 +170,11 @@ a {
     cursor: pointer;
 
     a {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 24px;
-        text-transform: uppercase;
+        @include text-caption-bold-uppercase;
     }
 }
 
 .nav-item:hover {
-    border-bottom: 2px solid #1493A4;
-}
+    @include border-bottom-primary-2;
 
-.line {
-    height:196px;
-    border-bottom: 2px solid rgb(250,249,251);
 }

@@ -1,69 +1,9 @@
-
-// Typography
-
 * {font-family: Lato}
 
-h1 { font-size: 28px; line-height:36px; font-weight:800}
-
-h2 { font-size: 24px; line-height:32x; font-weight:800}
-
-h3 { font-size: 20px; line-height:28px; font-weight:600 }
-
-h4 { font-size: 18px; line-height:28px; font-weight:700; text-transform: uppercase; }
-
-h5 { font-size: 16px; line-height:24px; font-weight:800 }
-
-
-.text-standard {  font-size: 16px; line-height:24px; font-weight:400}
-
-.text-semi-bold { font-size: 16px; line-height:24px; font-weight:600 }
-
-.text-uppercase { font-size: 16px; line-height:24px; font-weight:400; text-transform: uppercase; }
-
-.text-standard-link { font-size: 16px; line-height:24px; font-weight:400  }
-
-.text-caption { font-size: 14px; line-height:24px; font-weight:400 }
-
-.text-caption-link { font-size: 14px; line-height:24px; font-weight:400}
-
-.text-caption-bold { font-size: 14px; line-height:24px; font-weight:700 }
-
-.text-caption-small { font-size: 12px; line-height:20px; font-weight:400 }
-
-.text-caption-small-bold { font-size: 12px; line-height:20px; font-weight:700}
-
-
-.button-label { font-size: 14px; line-height:24px; font-weight:700 }
-
-
-
-// Colors
-
-.color-primary { background-color: rgb(90,176,187);}
-
-.color-gaduation { background-color: rgb(20,147,164);}
-
-.color-turquoise-light { background-color: rgb(206,231,235);}
-
-.color-accent-violet { background-color: rgb(102,49,141);}
-
-.color-accent-orange { background-color: rgb(251,130,0); }
-
-.color-success-green1 { background-color: rgb(76,175,80); }
-
-.color-success-green2 { background-color: rgb(235,244,230); }
-
-.color-warning-error { background-color: rgb(190,0,40); }
-
-.color-black { background-color: rgb(0,0,0); }
-
-.color-dark-grey { background-color: rgb(123,126,130); }
-
-.color-grey { background-color: rgb(207,207, 207); }
-
-.color-light-grey { background-color: rgb(250,249,251);}
-
-.color-white { background-color: rgb(255,255,255); }
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body { margin: 0; }
+
+@import "../src/app/styles/colors.scss";
+@import "../src/app/styles/heading.scss";
+@import "../src/app/styles/text.scss";

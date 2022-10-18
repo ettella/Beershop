@@ -1,0 +1,33 @@
+@mixin color-primary-background { background-color: rgb(90,176,187);}
+
+@mixin color-primary-text { color: rgb(90,176,187);}
+
+@mixin border-bottom-primary-1 { border-bottom: 1px solid rgb(90,176,187);}
+
+@mixin border-bottom-primary-2 { border-bottom: 2px solid rgb(90,176,187);}
+
+@mixin color-gaduation { background-color: rgb(20,147,164);}
+
+@mixin color-turquoise-light { background-color: rgb(206,231,235);}
+
+@mixin color-accent-violet { background-color: rgb(102,49,141);}
+
+@mixin color-accent-orange { background-color: rgb(251,130,0); }
+
+@mixin color-success-green1 { background-color: rgb(76,175,80); }
+
+@mixin color-success-green2 { background-color: rgb(235,244,230); }
+
+@mixin color-warning-error { background-color: rgb(190,0,40); }
+
+@mixin color-black { background-color: rgb(0,0,0); }
+
+@mixin color-dark-grey { background-color: rgb(123,126,130); }
+
+@mixin color-grey { background-color: rgb(207,207, 207); }
+
+@mixin color-light-grey { background-color: rgb(250,249,251);}
+
+@mixin border-bottom-light-grey-2 { border-bottom: 2px solid rgb(250,249,251);}
+
+@mixin color-white { background-color: rgb(255,255,255); }

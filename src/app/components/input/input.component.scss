@@ -1,3 +1,6 @@
+@import "../../styles/colors.scss";
+@import "../../styles/text.scss";
+
 .inputfield {
     box-sizing: border-box;
     display: flex;
@@ -20,7 +23,7 @@ input {
     align-items: flex-start;
     padding: 8px 16px;
     gap: 10px;
-    border: 1px solid #7B7E82;
+    @include border-beige;
     border-radius: 4px;
     
     width: 480px;
@@ -29,20 +32,12 @@ input {
 
     font-family: 'Lato';
     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    /* identical to box height, or 171% */
-
+    @include text-caption;
 
     /* Greyscale/Dark Grey */
 
-    color: #7B7E82;
-    border-color: #7B7E82;
-
-
-
-    /* Inside auto layout */
+    @include color-beige;
+    @include border-color-beige;
 
     flex: none;
     order: 0;
@@ -50,7 +45,7 @@ input {
 }
 
 .search{
-    background-color: rgb(90,176,187);
+    @include color-primary-background;
     border:none;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
