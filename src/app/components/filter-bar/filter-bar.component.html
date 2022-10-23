@@ -1,0 +1,46 @@
+
+<div class="filter-bar-box">
+    <div class="filterby">
+        <img src="../../../assets/filter.svg" alt="filtering" class="me-1">
+        <div> Filter by</div> 
+    </div>
+    <div class="filterig-box">
+        <div class="arrow-box"><p>Beer styles</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
+        </div> 
+
+        <app-checkbox [name]="'Ipa'"></app-checkbox>
+        <app-checkbox [name]="'Porter & Staut'"></app-checkbox>
+        <app-checkbox [name]="'Lager & Helles'"></app-checkbox>
+        <app-checkbox [name]="'Sour Ale & Wild Ale'"></app-checkbox>
+        <app-checkbox [name]="'Pale ale'"></app-checkbox>
+        <br>
+        <div class="arrow-box"><p>Method</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
+        </div> 
+        <app-checkbox [name]="'Mash Temp'"></app-checkbox>
+        <app-checkbox [name]="'Fermentation'"></app-checkbox>
+        <app-checkbox [name]="'Twist'"></app-checkbox>
+        <br>
+
+        <div class="arrow-box"><p>Special products</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
+        </div> 
+
+        <app-checkbox [name]="'Offers'"></app-checkbox>
+        <br>
+        <div class="alcohol-range">
+            <p>Alcohol range</p>
+            <div class="tag-box">
+                <div class="tag">From (%)</div>
+                <div class="tag">Until (%)</div>
+                <div class="apply">Apply</div>
+            </div>
+        </div>
+    </div>
+    <div class="reset-box">
+        <button> Reset to default</button>
+    </div>
+
+
+</div>
+
+
+

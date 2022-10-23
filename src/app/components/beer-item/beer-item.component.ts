@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Beer } from 'src/app/models/beer-model';
+import { BeerService } from 'src/app/services/beer.service';
 
 @Component({
   selector: 'app-beer-item',
@@ -7,13 +11,41 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BeerItemComponent implements OnInit {
 
+  @Input() beer?: Beer;
+  @Input() name?: string;
+  @Input() image_url?: string;
 
-  @Input() name!: string;
-  @Input() image_url!: string;
-  @Input() tagline!: string;
-  constructor() { }
+  @Input() tagline?: string;
+  @Input() contributor?: string;
+  @Input() price?: number;
+
+  counterForm: FormGroup;
+
+  constructor(fb: FormBuilder, public beerService: BeerService, public router: Router) {
+    this.counterForm = fb.group({
+      quantity: ['']
+    })
+  }
 
   ngOnInit(): void {
   }
+
+  get quantity(): FormControl{
+    return this.counterForm.get('quantity') as FormControl
+  }
+
+  selectedBeer(beer: Beer){
+    this.router.navigate(['/details', {id: beer.id}])
+    this.beerService.selectedBeer = beer;
+  }
+
+  addToCart(beer: Beer){
+    for(let i = 0; i < this.quantity.value; i++){
+      this.beerService.shoppingCart.push(beer);
+    }
+
+  }
+
+  
 
 }

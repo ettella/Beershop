@@ -1,22 +1,23 @@
 <div class="container-fluid line">
     <div class="row">
         <div class="contact">
-            <img src="../../../assets/communications.png" alt="Contact">
+            <img src="../../../assets/communications.svg" alt="Contact">
             <p>Contact</p>
         </div>
 
         <div class="language">
-            <img src="../../../assets/maps.png" alt="Language">
+            <img src="../../../assets/maps.svg" alt="Language">
             <p>en</p>
-            <img src="../../../assets/arrow down.png" alt="arrow">
+            <img src="../../../assets/arrow down.svg" alt="arrow">
         </div>
     </div>
 
     <div class="row middle-section">
 
         <div class="logo">
-            <a [routerLink]="['']">
-            <img src="../../../assets/logo.png" alt="BeerShop">
+            <!-- backToPage function instead of routerLink - in case of the user click on the logo after entering the details page -->
+            <a (click)="backToPage()">
+            <img src="../../../assets/logo.svg" alt="BeerShop">
             </a>
         </div>
 
@@ -26,29 +27,36 @@
 
         <div class="icons">
             <div class="icon">
-                <img src="../../../assets/user.png" alt="user">
+                <img src="../../../assets/user_primary.svg" alt="user">
                 <p>My Account</p>
             </div>
             <div class="icon">
-                <img src="../../../assets/heart.png" alt="wishlist">
+                <img src="../../../assets/heart_primary.svg" alt="wishlist">
                 <a [routerLink]="['wishlist']">Wishlist ({{ wishlistCounter }}) </a>
             </div>
             <div class="icon">
-                <img src="../../../assets/compareblue.png" alt="compare">
+                <img src="../../../assets/compare_primary.svg" alt="compare">
                 <p>Compare (0)</p>
             </div>
             <div class="icon">
-                <img src="../../../assets/cart.png" alt="cart">
-                <a [routerLink]="['shopping-cart']">Cart ({{ cartCounter }})</a>
+                <img src="../../../assets/cart_primary.svg" alt="cart">
+                <a [routerLink]="['shopping-cart']">Cart ({{ beerService.shoppingCart.length }})</a>
             </div>
         </div>
 
     </div>
 
     <div class="navbar">
-        <div class="nav-item"><a [routerLink]="['all-beers']"> All Beers </a></div>
+        <div class="nav-item"><a [routerLink]="['']"> All Beers </a></div>
         <div class="nav-item"><a > Packages </a></div>
         <div class="nav-item"><a > Beer Gifts </a></div>
-
     </div>
+    
+</div>
+<div class="nav-box">
+    <p>Home</p>
+    <p><img src="../../../assets/arrow right.svg" alt="next" ></p>
+    <p (click)="backToPage()" > All Beers </p>
+    <p *ngIf="beerService.selectedBeer"><img src="../../../assets/arrow right.svg" alt="next" /></p>
+    <p [class.selected]="beerService.selectedBeer" *ngIf="beerService.selectedBeer">{{beerService.selectedBeer.name}}</p>
 </div>

@@ -1,9 +1,30 @@
-<div class="container-fluid main">
-    <div class="main-box">
 
-        <div *ngFor="let beer of beers">
-            <app-beer-item [image_url]="beer.image_url" [name]="beer.name" [tagline]="beer.tagline" ></app-beer-item>
+    <div class="container-fluid">
+
+        <div class="heading-box"> 
+            <h1>All Beers</h1>
         </div>
         
+            <app-filter-bar></app-filter-bar>
+
+
+            <div class="main">
+            <!-- <div *ngIf="" or ng-template ? -->
+            <div class="activated-box">
+                <div class="mb-2">Active Filters</div>
+                <app-filter-tag [title]="'Fermentation'"></app-filter-tag>
+            </div>
+            <div class="main-box">
+                
+                
+                <div *ngFor="let beer of beerService.Beers">
+                    <app-beer-item [beer]="beer" [price]="beer.abv" [image_url]="beer.image_url" [name]="beer.name" [tagline]="beer.tagline" ></app-beer-item>
+                </div>
+
+                <!-- <div *ngIf="whichElementSelected">
+                    <app-details></app-details>
+                  </div> -->
+                
+            </div>
+        </div>
     </div>
-</div>

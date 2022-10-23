@@ -1,4 +1,5 @@
 @mixin text-standard {  font-size: 16px; line-height:24px; font-weight:400}
+@mixin text-standard-uppercase  {  font-size: 16px; line-height:24px; font-weight:400; text-transform: uppercase;}
 
 @mixin text-semi-bold { font-size: 16px; line-height:24px; font-weight:600 }
 
@@ -12,9 +13,11 @@
 
 @mixin text-caption-link { font-size: 14px; line-height:24px; font-weight:400}
 
-@mixin text-caption-bold { font-size: 14px; line-height:24px; font-weight:700 }
+@mixin text-caption-bold { font-size: 16px; line-height:24px; font-weight:700 }
 
 @mixin text-caption-bold-uppercase { font-size: 14px; line-height:24px; font-weight:700; text-transform: uppercase;}
+
+@mixin text-caption-bold-total-uppercase { font-size: 18px; line-height:24px; font-weight:700; text-transform: uppercase;}
 
 @mixin text-caption-small { font-size: 12px; line-height:20px; font-weight:400 }
 

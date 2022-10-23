@@ -37,6 +37,7 @@
     margin-left: 101px;
     margin-top: 75px;
     border-radius: 0px;
+    cursor: pointer;
 
 }
 
@@ -90,7 +91,7 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
-    gap: 24px;
+    gap: 34px;
 
     width: 366.64px;
     height:40px;
@@ -177,4 +178,23 @@ a {
 .nav-item:hover {
     @include border-bottom-primary-2;
 
+}
+
+.nav-box {
+    width:300px;
+    display:flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-top:20px;
+    cursor: pointer;
+
+    p:hover {
+        @include text-caption-bold;
+    }
+
+}
+
+.selected {
+    margin-top:-1px;
+    @include text-caption-bold;
 }

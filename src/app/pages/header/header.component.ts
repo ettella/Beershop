@@ -1,4 +1,8 @@
+import { Beer } from 'src/app/models/beer-model';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BeerService } from 'src/app/services/beer.service';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +12,22 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   wishlistCounter: number = 0;
-  cartCounter: number = 0;
+  // cartCounter = this.beerService.shoppingCart.length - it wasn't dynamic..
 
-  constructor() { }
+  deselectedBeer = undefined;
 
-  ngOnInit(): void {
+  constructor(public beerService: BeerService, private router: Router, private httpService: HttpService) {
+   
+   }
+
+   ngOnInit(): void {
   }
+  
+  backToPage(){
+    this.router.navigate(['']);
+    this.beerService.selectedBeer = this.deselectedBeer;
+
+  }
+
 
 }

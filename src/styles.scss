@@ -7,3 +7,6 @@ body { margin: 0; }
 @import "../src/app/styles/colors.scss";
 @import "../src/app/styles/heading.scss";
 @import "../src/app/styles/text.scss";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

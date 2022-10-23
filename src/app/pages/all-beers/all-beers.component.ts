@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
 import { HttpService } from './../../services/http.service';
 import { Component, OnInit } from '@angular/core';
 import { Beer } from 'src/app/models/beer-model';
+import { BeerService } from 'src/app/services/beer.service';
 
 @Component({
   selector: 'app-all-beers',
@@ -9,15 +11,17 @@ import { Beer } from 'src/app/models/beer-model';
 })
 export class AllBeersComponent implements OnInit {
 
-  beers: Beer[] = [];
+  // slider: string = "Home > All Beers"
+  // whichElementSelected: boolean = false;
 
-  constructor(private httpService: HttpService) {
+  constructor(private httpService: HttpService, public beerService: BeerService, private router: Router) {
     this.httpService.getAllBeers().subscribe((beerData)=> {
-      this.beers = beerData as Beer[];
+      this.beerService.Beers = beerData as Beer[];
     })
    }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
   }
-
+  
+  
 }

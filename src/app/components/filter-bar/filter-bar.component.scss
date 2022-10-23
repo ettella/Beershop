@@ -1,0 +1,153 @@
+@import '../../styles/text.scss';
+@import '../../styles/heading.scss';
+@import '../../styles/colors.scss';
+
+.filter-bar-box {
+    height: 770px;
+    width: 302px;
+    border-radius: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    margin-top:384px;
+    margin-left: 100px;
+
+    border:1px solid rgb(236, 231, 231); // for sizing
+    border-radius:4px;
+
+}
+
+.filterby {
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    width: 194.07px;
+    @include text-standard-uppercase;
+    margin-bottom:10px;
+}
+
+app-checkbox {
+    @include text-standard-uppercase
+}
+
+.filtering-box  {
+    margin-top:16px;  
+}
+
+.arrow-box {
+    display:flex;
+    justify-content: space-between;
+    width:302px;
+    img { margin-bottom:12px; margin-right:16px}
+
+}
+
+.tag-box {
+    height: 40px;
+    width: 302px;
+    left: 0px;
+    top: 40px;
+    border-radius: 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+}
+
+.tag {
+    height: 40px;
+    width: 92px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    
+    width: 92px;
+    height: 40px;
+    
+    border-radius:4px;
+    @include text-standard;
+    @include  border-color-dark-grey ;
+
+}
+
+.apply {
+
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+    
+    border-radius: 4px;
+    padding: 8px 24px 8px 24px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+    width: 37px;
+    height: 24px;
+
+    @include h-6;
+    @include text-color-gaduation;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top:10px;
+
+    cursor: pointer;
+
+}
+
+.reset-box {
+    width:302px;
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+
+    button {
+        height: 40px;
+        width: 158px;
+        left: 77px;
+        top: 665px;
+        border-radius: 4px;
+        padding: 8px 24px 8px 24px;
+
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 24px;
+        gap: 8px;
+        border-radius: 4px;
+
+        @include h-6;
+        @include text-color-gaduation;
+        @include border-color-gaduation;
+        @include background-color-white;
+
+            }
+}
+
+p {
+    @include text-caption-bold
+}

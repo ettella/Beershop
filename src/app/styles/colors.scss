@@ -4,7 +4,11 @@
 
 @mixin border-bottom-primary-1 { border-bottom: 1px solid rgb(90,176,187);}
 
+@mixin border-color-gaduation { border: 1px solid rgb(20,147,164);;}
+
 @mixin border-bottom-primary-2 { border-bottom: 2px solid rgb(90,176,187);}
+
+@mixin text-color-gaduation { color: rgb(20,147,164);}
 
 @mixin color-gaduation { background-color: rgb(20,147,164);}
 
@@ -13,6 +17,8 @@
 @mixin color-accent-violet { background-color: rgb(102,49,141);}
 
 @mixin color-accent-orange { background-color: rgb(251,130,0); }
+
+@mixin border-line-color-accent-orange { border: 1px solid rgb(251,130,0); }
 
 @mixin color-success-green1 { background-color: rgb(76,175,80); }
 
@@ -26,7 +32,19 @@
 
 @mixin color-black { color: rgb(0,0,0); }
 
+@mixin border-line-color-black { border: 1px solid rgb(0,0,0); }
+
 @mixin color-dark-grey { color: rgb(123,126,130); }
+
+@mixin border-line-color-dark-grey { border: 1px solid rgb(123,126,130); }
+
+@mixin border-color-dark-grey { border: 1px solid rgb(123,126,130); }
+
+
+@mixin border-bottom-color-dark-grey { border-bottom: 1px solid rgb(123,126,130); }
+
+@mixin border-top-color-dark-grey { border-top: 1px solid rgb(123,126,130); }
+
 
 @mixin color-grey { background-color: rgb(207,207, 207); }
 
