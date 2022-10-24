@@ -188,14 +188,13 @@ a {
     cursor: pointer;
 
     p:hover {
-        @include text-caption-bold;
+        @include color-primary-text;
     }
 
 }
 
 .selected {
-    margin-top:-1px;
-    @include text-caption-bold;
+    @include color-primary-text;
 }
 
 .inputfield {

@@ -182,6 +182,20 @@
 
 }
 
+.heart-icon {
+    margin-right:10px;
+    cursor: pointer;
+}
+
+.heart-icon:active {
+    padding:3px;
+    border-radius: 4px;
+    @include border-color-gaduation;
+    @include color-primary-background;
+
+}
+
+
 .shipping-price-box {
 
     height: 56px;

@@ -1,3 +1,4 @@
+import { Beer } from 'src/app/models/beer-model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { BeerService } from 'src/app/services/beer.service';
@@ -14,6 +15,7 @@ export class DetailsComponent implements OnInit {
   maltArray: string[] = [];
   hopsArray: string[] = [];
   yeastArray: string[] = [];
+  beer!: Beer
 
   counterForm: FormGroup;
 
@@ -22,17 +24,17 @@ export class DetailsComponent implements OnInit {
       quantity: ['']
     });
   }
-
+  
   get quantity(): FormControl {
     return this.counterForm.get('quantity') as FormControl
   }
-
+  
   deleteFromCart(){
     if (this.quantity.value > 0) {
       this.counterForm.reset();
     }
   }
-
+  
   addUpToCart(){
     this.quantity?.setValue(this.quantity.value + 1);
   }
@@ -45,6 +47,14 @@ export class DetailsComponent implements OnInit {
     console.log(this.beerService.shoppingCart);
     
   }
+
+  
+  addToWishlist(){
+    this.beerService.wishlist.push(this.beerService.selectedBeer!);
+
+  //check if it's in the wishlist:
+  console.log(this.beerService.wishlist);
+}
 
   ngOnInit(): void {
     let ingredients = this.beerService.selectedBeer?.ingredients;
@@ -79,6 +89,8 @@ export class DetailsComponent implements OnInit {
       this.yeastArray.push(yeast);
     }
   }
+
+
 
 
 

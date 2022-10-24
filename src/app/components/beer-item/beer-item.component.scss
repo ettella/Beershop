@@ -54,7 +54,6 @@
     align-self: stretch;
     flex-grow: 0;
 
-    cursor:pointer;
 
 }
 
@@ -95,6 +94,11 @@
     gap:6px
 }
 
+.heart-icon {
+    margin-left:6px;
+    cursor: pointer;
+}
+
 .beer-img-box {
     background-size:contain; 
     background-repeat: no-repeat; 
@@ -102,6 +106,7 @@
     width:270px; 
     height:160px; 
     display: flex; 
+    cursor: pointer;
 }
 .beer-img-box:hover {
     background-size:contain; 
@@ -174,6 +179,14 @@ flex-grow: 0;
     align-items: center;
     p { margin-top:-5px; 
         margin-left:5px }
+}
+
+.heart-icon:active {
+    padding:3px;
+    border-radius: 4px;
+    @include border-color-gaduation;
+    @include color-primary-background;
+
 }
 
 .content-box {

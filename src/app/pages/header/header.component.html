@@ -39,7 +39,7 @@
             </div>
             <div class="icon">
                 <img src="../../../assets/heart_primary.svg" alt="wishlist">
-                <a [routerLink]="['wishlist']">Wishlist ({{ wishlistCounter }}) </a>
+                <a [routerLink]="['wishlist']">Wishlist ({{ beerService.wishlist.length }}) </a>
             </div>
             <div class="icon">
                 <img src="../../../assets/compare_primary.svg" alt="compare">
@@ -66,4 +66,5 @@
     <p (click)="backToPage()" > All Beers </p>
     <p *ngIf="beerService.selectedBeer"><img src="../../../assets/arrow right.svg" alt="next" /></p>
     <p [class.selected]="beerService.selectedBeer" *ngIf="beerService.selectedBeer">{{beerService.selectedBeer.name}}</p>
+   
 </div>

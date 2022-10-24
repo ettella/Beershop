@@ -43,7 +43,17 @@ export class BeerItemComponent implements OnInit {
     for(let i = 0; i < this.quantity.value; i++){
       this.beerService.shoppingCart.push(beer);
     }
+    //check if it's in the shopping cart:
+    console.log(this.beerService.shoppingCart);
 
+  }
+
+
+  addToWishlist(beer: Beer){
+      this.beerService.wishlist.push(beer);
+
+    //check if it's in the wishlist:
+    console.log(this.beerService.wishlist);
   }
 
   

@@ -1,16 +1,16 @@
 
 <div class="container-fluid main-box">
-    <div class="top-box" (click)="selectedBeer(beer!)" >
+    <div class="top-box"  >
         <div class="icon-box">
             <app-badge-sale></app-badge-sale>
             <app-badge-product-of-the-week></app-badge-product-of-the-week>
             <div class="icon24-box">
                 <img src="../../../assets/compare.svg" alt="to compare" >
-                <img src="../../../assets/heart.svg" alt="to wishlist" style="margin-left:6px" >
+                <img src="../../../assets/heart.svg" alt="to wishlist" class="heart-icon" (click)="addToWishlist(beer!)" >
             </div>
         </div>
         
-        <div class="beer-img-box" style="background-image: url({{image_url}})"></div>
+        <div class="beer-img-box" style="background-image: url({{image_url}})" (click)="selectedBeer(beer!)"></div>
         <div class="title-box">
             <p>{{ tagline | searchFilter: beerService.query }}</p>
             <div>{{ name | searchFilter: beerService.query }}</div>
