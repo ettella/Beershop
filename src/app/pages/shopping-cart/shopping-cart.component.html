@@ -50,11 +50,11 @@
 
     </div>
 
-    <div class="row bottom-box my-5">
-      <h3>You might also like...</h3>
-    </div>
     
     
+  </div>
+  <div class="row bottom-box my-5" *ngIf="beerService.shoppingCart.length > 0">
+    <h3>You might also like...</h3>
   </div>
 
   <div class="main-summary-box">
