@@ -19,8 +19,6 @@
 
     margin-top:384px;
     margin-left: 100px;
-
-    border:1px solid rgb(236, 231, 231); // for sizing
     border-radius:4px;
 
 }
@@ -35,7 +33,8 @@
 }
 
 app-checkbox {
-    @include text-standard-uppercase
+    @include text-standard-uppercase;
+    @include background-color-white
 }
 
 .filtering-box  {
@@ -65,7 +64,7 @@ app-checkbox {
 
 }
 
-.tag {
+input {
     height: 40px;
     width: 92px;
     left: 0px;
@@ -74,7 +73,7 @@ app-checkbox {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px;
+    padding: 12px;
     gap: 4px;
     
     width: 92px;
@@ -82,7 +81,9 @@ app-checkbox {
     
     border-radius:4px;
     @include text-standard;
-    @include  border-color-dark-grey ;
+    @include  border-color-dark-grey;
+
+  
 
 }
 
@@ -93,7 +94,7 @@ app-checkbox {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 8px 24px;
+    padding: 10px;
     gap: 8px;
     
     border-radius: 4px;
@@ -102,8 +103,8 @@ app-checkbox {
     order: 2;
     flex-grow: 0;
 
-    width: 37px;
-    height: 24px;
+    width: 70px;
+    height: 40px;
 
     @include h-6;
     @include text-color-gaduation;
@@ -111,10 +112,13 @@ app-checkbox {
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin-top:10px;
-
     cursor: pointer;
 
+}
+
+.apply:hover {
+    @include color-white;
+    @include color-primary-background;
 }
 
 .reset-box {
@@ -145,9 +149,41 @@ app-checkbox {
         @include border-color-gaduation;
         @include background-color-white;
 
-            }
+            };
+    button:hover{
+        @include color-white;
+    @include color-primary-background;
+    }
 }
 
 p {
     @include text-caption-bold
+}
+
+.all-activated-filters-box{
+    margin-top: 130px;
+}
+
+.is-active-box{
+    display:flex;
+    flex-direction: row;
+    margin-left: 400px;
+    margin-top:100px;
+}
+
+.activated-box {
+    margin-left: 408px;
+    margin-bottom:-90px;
+}
+
+.error-message {
+    width:300px;
+    height:42px;
+    @include color-accent-orange;
+    @include color-white;
+    @include text-caption-bold;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    padding-top:8px;
 }

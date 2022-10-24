@@ -7,6 +7,7 @@ import { Beer } from '../models/beer-model';
 export class BeerService {
 
   Beers: Beer[] = [];
+  // filteredBeers: Beer[] = [];
   shoppingCart: Beer[] = [];
   wishlist: Beer[] = [];
 

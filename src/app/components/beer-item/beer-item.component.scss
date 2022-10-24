@@ -7,8 +7,7 @@
 
     height: 467px;
     width: 302px;
-    left: 0px;
-    top: 0px;
+
     border-radius: 4px;
     padding: 16px;
     justify-content: space-between;
@@ -25,15 +24,11 @@
     width: 302px;
     height: 467px;
 
-    background: #FFFFFF;
-
     border: 1px solid #E9E9E9;
     box-shadow: 0px 2px 4px rgba(5, 7, 32, 0.08);
     border-radius: 4px;
+    
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 
 }
 
@@ -213,3 +208,4 @@ button {
     display:flex;
     margin-top:12px
 }
+

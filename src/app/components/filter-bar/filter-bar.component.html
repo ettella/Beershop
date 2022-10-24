@@ -8,39 +8,80 @@
         <div class="arrow-box"><p>Beer styles</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
         </div> 
 
-        <app-checkbox [name]="'Ipa'"></app-checkbox>
-        <app-checkbox [name]="'Porter & Staut'"></app-checkbox>
-        <app-checkbox [name]="'Lager & Helles'"></app-checkbox>
-        <app-checkbox [name]="'Sour Ale & Wild Ale'"></app-checkbox>
-        <app-checkbox [name]="'Pale ale'"></app-checkbox>
+        <app-checkbox [name]="'Ipa'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
+        <app-checkbox [name]="'Porter & Staut'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
+        <app-checkbox [name]="'Lager & Helles'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
+        <app-checkbox [name]="'Sour Ale & Wild Ale'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
+        <app-checkbox [name]="'Pale ale'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
         <br>
         <div class="arrow-box"><p>Method</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
         </div> 
-        <app-checkbox [name]="'Mash Temp'"></app-checkbox>
-        <app-checkbox [name]="'Fermentation'"></app-checkbox>
-        <app-checkbox [name]="'Twist'"></app-checkbox>
+        <app-checkbox [name]="'Mash Temp'" (changeCheckbox)="filteringMashTempMethod()"></app-checkbox>
+        <app-checkbox [name]="'Fermentation'" (changeCheckbox)="filteringFermentationMethod()"></app-checkbox>
+        <app-checkbox [name]="'Twist'" (changeCheckbox)="filteringTwistMethod()"></app-checkbox>
         <br>
 
         <div class="arrow-box"><p>Special products</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
         </div> 
 
-        <app-checkbox [name]="'Offers'"></app-checkbox>
+        <app-checkbox [name]="'Offers'" (changeCheckbox)="filteringOfferMethod()"></app-checkbox>
         <br>
-        <div class="alcohol-range">
+
+
+        <div class="alcohol-range" [formGroup]="alcForm">
             <p>Alcohol range</p>
             <div class="tag-box">
-                <div class="tag">From (%)</div>
-                <div class="tag">Until (%)</div>
-                <div class="apply">Apply</div>
+                <input type="text" formControlName="from" class="tag" placeholder="From (%)"/>
+                <input type="text" formControlName="to" class="tag" placeholder="Until (%)"/>
+                <div class="apply" (click)="apply()">Apply</div>
             </div>
         </div>
+
+
     </div>
     <div class="reset-box">
-        <button> Reset to default</button>
+        <button (click)="resetFiltering()"> Reset to default</button>
     </div>
 
 
 </div>
+
+
+
+<div class="all-activated-filters-box">
+    <div *ngIf="isFiltersActive">
+        <div class="activated-box">
+            <div class="my-2">Active Filters</div>
+        </div> 
+    </div>
+
+    <div class="is-active-box">
+    <div *ngIf="wichBeerStylesFilterSelected">
+        <div class="beer-styles-box">
+            <app-filter-tag [title]="'Beer styles'"></app-filter-tag>
+        </div>  
+    </div>
+
+    <div *ngIf="wichMethodFilterSelected">
+        <div class="method-box">
+            <app-filter-tag [title]="'Method'"></app-filter-tag>
+        </div>  
+    </div>
+
+    <div *ngIf="wichOfferFilterSelected">
+        <div class="special-offers-box">
+            <app-filter-tag [title]="'Special Offers'"></app-filter-tag>
+        </div>  
+    </div>
+
+    <div *ngIf="errorMessage">
+        <div class="error-message" style="width:300px">No items match your search!</div>
+    </div>
+
+    </div>
+</div>
+
+
 
 
 

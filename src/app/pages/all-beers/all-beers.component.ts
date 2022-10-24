@@ -20,8 +20,10 @@ export class AllBeersComponent implements OnInit {
     })
    }
 
-   ngOnInit(): void {
+
+  ngOnInit(): void {
   }
-  
+
+
   
 }
