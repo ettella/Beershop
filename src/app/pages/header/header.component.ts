@@ -16,6 +16,8 @@ export class HeaderComponent implements OnInit {
 
   deselectedBeer = undefined;
 
+  query: any
+
   constructor(public beerService: BeerService, private router: Router, private httpService: HttpService) {
    
    }

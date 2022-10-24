@@ -21,8 +21,15 @@
             </a>
         </div>
 
-        <div>
-            <app-input></app-input>
+        <div class="inputfield">
+            <input type="text"
+                placeholder="Search..."
+                name="searchFilter"
+                [(ngModel)]="beerService.query"
+                >
+            <div class="search">
+                <img src="../../../assets/search.svg" alt="search-button">
+            </div>
         </div>
 
         <div class="icons">

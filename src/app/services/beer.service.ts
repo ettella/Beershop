@@ -10,6 +10,9 @@ export class BeerService {
   shoppingCart: Beer[] = [];
   wishlist: Beer[] = [];
 
+  // query for using searchFilter pipe:
+  query:any;
+
   // only one beer:
 
   selectedBeer?: Beer;

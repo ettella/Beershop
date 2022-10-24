@@ -13,16 +13,15 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 import { DetailsComponent } from './pages/details/details.component';
 import { CustomersAlsoBoughtComponent } from './pages/customers-also-bought/customers-also-bought.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
-import { InputComponent } from './components/input/input.component';
 import { BeerItemComponent } from './components/beer-item/beer-item.component';
 import { BadgeSaleComponent } from './components/badge-sale/badge-sale.component';
 import { BadgeProductOfTheWeekComponent } from './components/badge-product-of-the-week/badge-product-of-the-week.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 import { FilterTagComponent } from './components/filter-tag/filter-tag.component';
-import { ButtonComponent } from './components/button/button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchFilterPipe } from './components/pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -33,15 +32,14 @@ import { HomeComponent } from './pages/home/home.component';
     DetailsComponent,
     CustomersAlsoBoughtComponent,
     WishlistComponent,
-    InputComponent,
     BeerItemComponent,
     BadgeSaleComponent,
     BadgeProductOfTheWeekComponent,
     CheckboxComponent,
     FilterBarComponent,
     FilterTagComponent,
-    ButtonComponent,
     HomeComponent,
+    SearchFilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,7 @@
             <div class="main-box">
                 
                 
-                <div *ngFor="let beer of beerService.Beers">
+                <div *ngFor="let beer of beerService.Beers | searchFilter: beerService.query">
                     <app-beer-item [beer]="beer" [price]="beer.abv" [image_url]="beer.image_url" [name]="beer.name" [tagline]="beer.tagline" ></app-beer-item>
                 </div>
 

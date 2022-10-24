@@ -198,3 +198,58 @@ a {
     margin-top:-1px;
     @include text-caption-bold;
 }
+
+.inputfield {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    left: 28.24%;
+    right: 35.77%;
+    top: 45.45%;
+    bottom: 34.34%;
+
+    height: 40px;
+    width: 520.08px;
+    left: 408px;
+    top: 90px;
+
+}
+
+input {
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 10px;
+    @include border-beige;
+    border-radius: 4px;
+    
+    width: 480px;
+
+/* Caption */
+
+    font-family: 'Lato';
+    font-style: normal;
+    @include text-caption;
+
+    /* Greyscale/Dark Grey */
+
+    @include color-beige;
+    @include border-color-beige;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.search{
+    @include color-primary-background;
+    border:none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-left:-36px;
+    width:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
