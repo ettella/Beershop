@@ -115,10 +115,9 @@
     order: 0;
     flex-grow: 0;
 
-    a:hover {
-        @include border-bottom-primary-1;
-        @include color-primary-text;
-    }
+}
+.icon-active:hover{
+    @include border-bottom-primary-1;
 }
 
 .middle-section {
@@ -148,6 +147,8 @@ a {
     left: 407.44140625px;
     margin-top: 156.9637451171875px;
     border-radius: 0px;
+
+    
 }
 
 .nav-item {
@@ -167,17 +168,18 @@ a {
     flex: none;
     order: 0;
     flex-grow: 0;
-    cursor: pointer;
+    
 
     a {
         @include text-caption-bold-uppercase;
     }
 }
 
-.nav-item:hover {
-    @include border-bottom-primary-2;
-
+.item-hover:hover {
+        @include border-bottom-primary-1;
+        cursor: pointer;
 }
+
 
 .nav-box {
     width:300px;
