@@ -17,6 +17,10 @@
 -                        ngFor -  to get data from beerService.
 -                        
 - Rooting - using :id with Router navigation to select the appropiate item in beer-item component.
+-         - navbox in header - All beers and the Logo navigates back the user to the all-beers page, wich is the deafult page in the application.
+-
+- Deploying - in the deploy version the checkbox inner icon is missing, but it is visible in locally.
+
 
 
 

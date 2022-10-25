@@ -1,6 +1,9 @@
 
-<div class="shopping-cart-box my-5 pb-5" *ngFor="let beer of beerService.shoppingCart; let i = index;">
+  <div *ngIf="beerService.shoppingCart.length > 0">
     <h2 mt-5>Shopping Cart</h2>
+  </div> 
+
+  <div class="shopping-cart-box my-5 pb-5" *ngFor="let beer of beerService.shoppingCart; let i = index;">
     <div class="row">
 
       <div class="col-xs-12 col-lg-2">
@@ -55,6 +58,12 @@
   </div>
   <div class="row bottom-box mt-5" *ngIf="beerService.shoppingCart.length > 0">
     <h3>You might also like...</h3>
+    <!-- data from wishlist, but the paginator is missing yet -->
+    <div class="like-box">
+      <div *ngFor="let beer of beerService.wishlist" >
+          <app-beer-item [beer]="beer" [price]="beer.abv" [image_url]="beer.image_url" [name]="beer.name" [tagline]="beer.tagline" ></app-beer-item>
+      </div>
+  </div>
   </div>
 
   <div class="main-summary-box">
@@ -84,7 +93,7 @@
     <div class="item-box">
       <h4>Order Total</h4>
       <!-- static yet, but the data would come from ngModel -->
-      <h4>€ 20.49</h4>
+      <h4>€ 21.45</h4>
     </div>
   
       <!-- button is static -->
