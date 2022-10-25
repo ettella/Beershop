@@ -8,6 +8,8 @@
         <div class="arrow-box"><p>Beer styles</p> <img src="./assets/arrow_up.svg" alt="arrow up">
         </div> 
 
+        <!-- the checkbox - checked state is static yet -->
+
         <app-checkbox [name]="'Ipa'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
         <app-checkbox [name]="'Porter & Staut'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
         <app-checkbox [name]="'Lager & Helles'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
@@ -74,6 +76,7 @@
         </div>  
     </div>
 
+    <!-- the error message still visible if the filters are active above -->
     <div *ngIf="errorMessage">
         <div class="error-message" style="width:300px">No items match your search!</div>
     </div>

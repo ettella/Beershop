@@ -8,7 +8,8 @@
 -         
 - Communication between the components and pages: service - beerService and httpService.
 -                                                         - Custom-components: using property bindings and string literals.
--                                                         - Communication between custom elements and pages - @Input and EventEmitter (with checkbox)
+-                                                         - Data transfer between custom elements and pages - @Input and EventEmitter (with checkbox)
+
 - Filtering: Search bar - custom pipe: searchPipe
 -            Filter bar with checkboxes: using GET method with map(rxjs)
 -            Filtering alcohol range: with reactive Form (reactiveFormsModule) - with these three methods the filtered list is functioning separated.
