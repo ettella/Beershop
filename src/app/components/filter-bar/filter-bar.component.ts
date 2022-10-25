@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Beer } from 'src/app/models/beer-model';
 import { HttpService } from 'src/app/services/http.service';
 import { Component, OnInit } from '@angular/core';
@@ -78,6 +79,7 @@ export class FilterBarComponent implements OnInit {
 
     this.alcForm.reset();
     this.errorMessage = false;
+
   }
 
 

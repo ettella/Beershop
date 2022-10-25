@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { AllBeersComponent } from './pages/all-beers/all-beers.component';
@@ -45,8 +42,6 @@ import { SearchFilterPipe } from './components/pipes/search-filter.pipe';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
     FormsModule,
     ReactiveFormsModule
   ],
