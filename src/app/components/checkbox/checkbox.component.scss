@@ -35,7 +35,7 @@ input[type=checkbox]:checked {
     @include border-line-color-black;
     border-radius: 1px;
     // checkbox inner icon is visible only locally:
-    // background-image: url(../../../assets/checkbox.svg); 
+    background-image: url(../../../assets/checkbox.svg); 
 
     background-size: 12px 10px;
     &:focus{
