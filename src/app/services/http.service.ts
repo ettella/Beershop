@@ -53,7 +53,7 @@ export class HttpService {
   public getMethodTwistFilter():Observable<Beer[]>{
     return this.http.get<Beer[]>(this.BASE_URL).pipe(
       map( twistFilter => {
-        const filteredlist = twistFilter.filter(b => b.method.twist.includes('twist'));
+        const filteredlist = twistFilter.filter(b => b.method.twist);
         return filteredlist;
       })
     )
