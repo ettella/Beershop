@@ -13,8 +13,8 @@
                 <div class="top-title-box">
                     <h1> {{ beerService.selectedBeer.name }} </h1>
                     <div >
-                    <img src="../../../assets/heart.svg" alt="to wishlist" class="heart-icon" (click)="addToWishlist()" >
-                    <img src="../../../assets/share.svg" alt="let's share!" />
+                    <img src="./assets/heart.svg" alt="to wishlist" class="heart-icon" (click)="addToWishlist()" >
+                    <img src="./assets/share.svg" alt="let's share!" />
                     </div>
                 </div>
                 <p class="tagline">{{ beerService.selectedBeer.tagline }}</p>
@@ -41,7 +41,7 @@
 
                 <div class="counter-input-box">
 
-                <a class="delete" (click)="deleteFromCart()"> <img src="../../../assets/minus.svg"
+                <a class="delete" (click)="deleteFromCart()"> <img src="./assets/minus.svg"
                   alt="delete">
                 </a>
 
@@ -49,13 +49,13 @@
 
                 <a (click)="addUpToCart()"
                 class="add">
-                <img src="../../../assets/plus.svg" alt="add">
+                <img src="./assets/plus.svg" alt="add">
               </a>
 
             </div>
 
               <button (click)="submitToCart()">
-                <img src="../../../assets/cartwhite.svg" alt="shopping-cart"  />Add to
+                <img src="./assets/cartwhite.svg" alt="shopping-cart"  />Add to
                 cart
               </button>
 

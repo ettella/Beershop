@@ -1,14 +1,14 @@
 <div class="container-fluid line">
     <div class="row">
         <div class="contact">
-            <img src="../../../assets/communications.svg" alt="Contact">
+            <img src="./assets/communications.svg" alt="Contact">
             <p>Contact</p>
         </div>
 
         <div class="language">
-            <img src="../../../assets/maps.svg" alt="Language">
+            <img src="./assets/maps.svg" alt="Language">
             <p>en</p>
-            <img src="../../../assets/arrow down.svg" alt="arrow">
+            <img src="./assets/arrow down.svg" alt="arrow">
         </div>
     </div>
 
@@ -17,7 +17,7 @@
         <div class="logo">
             <!-- backToPage function instead of routerLink - in case of the user click on the logo after entering the details page -->
             <a (click)="backToPage()">
-            <img src="../../../assets/logo.svg" alt="BeerShop">
+            <img src="./assets/logo.svg" alt="BeerShop">
             </a>
         </div>
 
@@ -28,25 +28,25 @@
                 [(ngModel)]="beerService.query"
                 >
             <div class="search">
-                <img src="../../../assets/search.svg" alt="search-button">
+                <img src="./assets/search.svg" alt="search-button">
             </div>
         </div>
 
         <div class="icons">
             <div class="icon">
-                <img src="../../../assets/user_primary.svg" alt="user">
+                <img src="./assets/user_primary.svg" alt="user">
                 <p>My Account</p>
             </div>
             <div class="icon">
-                <img src="../../../assets/heart_primary.svg" alt="wishlist">
+                <img src="./assets/heart_primary.svg" alt="wishlist">
                 <a [routerLink]="['wishlist']">Wishlist ({{ beerService.wishlist.length }}) </a>
             </div>
             <div class="icon">
-                <img src="../../../assets/compare_primary.svg" alt="compare">
+                <img src="./assets/compare_primary.svg" alt="compare">
                 <p>Compare (0)</p>
             </div>
             <div class="icon">
-                <img src="../../../assets/cart_primary.svg" alt="cart">
+                <img src="./assets/cart_primary.svg" alt="cart">
                 <a [routerLink]="['shopping-cart']">Cart ({{ beerService.shoppingCart.length }})</a>
             </div>
         </div>
@@ -63,9 +63,9 @@
 
 <div class="nav-box">
     <p>Home</p>
-    <p><img src="../../../assets/arrow right.svg" alt="next" ></p>
+    <p><img src="./assets/arrow right.svg" alt="next" ></p>
     <p (click)="backToPage()" > All Beers </p>
-    <p *ngIf="beerService.selectedBeer"><img src="../../../assets/arrow right.svg" alt="next" /></p>
+    <p *ngIf="beerService.selectedBeer"><img src="./assets/arrow right.svg" alt="next" /></p>
     <p [class.selected]="beerService.selectedBeer" *ngIf="beerService.selectedBeer">{{beerService.selectedBeer.name}}</p>
    
 </div>

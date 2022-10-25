@@ -1,11 +1,11 @@
 
 <div class="filter-bar-box">
     <div class="filterby">
-        <img src="../../../assets/filter.svg" alt="filtering" class="me-1">
+        <img src="./assets/filter.svg" alt="filtering" class="me-1">
         <div> Filter by</div> 
     </div>
     <div class="filterig-box">
-        <div class="arrow-box"><p>Beer styles</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
+        <div class="arrow-box"><p>Beer styles</p> <img src="./assets/arrow_up.svg" alt="arrow up">
         </div> 
 
         <app-checkbox [name]="'Ipa'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
@@ -14,14 +14,14 @@
         <app-checkbox [name]="'Sour Ale & Wild Ale'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
         <app-checkbox [name]="'Pale ale'" (changeCheckbox)="filteringBeerStyles()"></app-checkbox>
         <br>
-        <div class="arrow-box"><p>Method</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
+        <div class="arrow-box"><p>Method</p> <img src="./assets/arrow_up.svg" alt="arrow up">
         </div> 
         <app-checkbox [name]="'Mash Temp'" (changeCheckbox)="filteringMashTempMethod()"></app-checkbox>
         <app-checkbox [name]="'Fermentation'" (changeCheckbox)="filteringFermentationMethod()"></app-checkbox>
         <app-checkbox [name]="'Twist'" (changeCheckbox)="filteringTwistMethod()"></app-checkbox>
         <br>
 
-        <div class="arrow-box"><p>Special products</p> <img src="../../../assets/arrow_up.svg" alt="arrow up">
+        <div class="arrow-box"><p>Special products</p> <img src="./assets/arrow_up.svg" alt="arrow up">
         </div> 
 
         <app-checkbox [name]="'Offers'" (changeCheckbox)="filteringOfferMethod()"></app-checkbox>
